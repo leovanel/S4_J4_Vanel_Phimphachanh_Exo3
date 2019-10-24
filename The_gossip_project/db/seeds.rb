@@ -13,9 +13,13 @@ City.destroy_all
 Gossip.destroy_all
 PrivateMessage.destroy_all
 Tag.destroy_all
+JoinTagGossips.destroy_all
+
 
 10.times do |index|
-  User.create(id:index+1, first_name:Faker::Name.first_name, last_name:Faker::Name.last_name, description: , email:Faker::Internet.email, age:rand(1..99))
+  User.create(id:index+1, first_name:Faker::Name.first_name, 
+  last_name:Faker::Name.last_name, description:Faker::Lorem.sentence(word_count: 3), 
+  email:Faker::Internet.email, age:rand(1..99),city_id: rand(1..10))
 end
 
 10.times do |index|
@@ -23,15 +27,21 @@ end
 end
 
 20.times do |index|
-  City.create(id:index+1, name:Faker::Address.city, zip_code:Faker::Address.zip_code)
+  Gossip.create(id:index+1, title:Faker::Lorem.word,
+   content:Faker::Lorem.sentence(word_count: 5), user_id: rand(1..10))
 end
 
 10.times do |index|
   Tag.create(title:"##{Faker::Verb.base}")
 end
 
-20.times do |index|
-  PrivateMessage.create(content:Faker::ChuckNorris, sender:, )
+5.times do |index|
+  PrivateMessage.create(content:Faker::Lorem.sentence(word_count: 10),sender:rand(1..10),
+  recipient:rand(1..10) )
+end
+
+10.times do |index|
+  JoinTagGossip.create(id:index+1, gossip_id:rand(1..20), tag_id:rand(1..10))
 end
 
 

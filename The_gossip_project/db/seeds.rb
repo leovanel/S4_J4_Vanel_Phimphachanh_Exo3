@@ -26,4 +26,12 @@ end
   City.create(id:index+1, name:Faker::Address.city, zip_code:Faker::Address.zip_code)
 end
 
+10.times do |index|
+  Tag.create(title:"##{Faker::Verb.base}")
+end
+
+20.times do |index|
+  PrivateMessage.create(content:Faker::ChuckNorris, sender:, )
+end
+
 

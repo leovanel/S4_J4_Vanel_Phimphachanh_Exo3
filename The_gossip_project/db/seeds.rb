@@ -18,3 +18,12 @@ Tag.destroy_all
   User.create(id:index+1, first_name:Faker::Name.first_name, last_name:Faker::Name.last_name, description: , email:Faker::Internet.email, age:rand(1..99))
 end
 
+10.times do |index|
+  City.create(id:index+1, name:Faker::Address.city, zip_code:Faker::Address.zip_code)
+end
+
+20.times do |index|
+  City.create(id:index+1, name:Faker::Address.city, zip_code:Faker::Address.zip_code)
+end
+
+

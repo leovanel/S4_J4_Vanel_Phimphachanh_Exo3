@@ -1,6 +1,6 @@
 # README
 
-Salut Correcteur, 'j'ai modifié le Seed à 6h du mat a cause d'un petit pb.. mais tt le reste à été pusher avant minuit'
+Salut Correcteur, 'j'ai modifié le Seed à 6h du mat a cause d'un petit pb.. mais tt le reste à été pusher avant minuit libre à toi de le prendre en compte'
 bon courage !
 
 Allez, on va poser les bases de notre fameux Gossip Project pour le transcrire en Rails. Et comme je te l'ai expliqué, la première étape est la modélisation de sa BDD !
